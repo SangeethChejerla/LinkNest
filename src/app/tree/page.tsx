@@ -3,6 +3,7 @@ import { db } from '@/db/db';
 import { links } from '@/db/schema';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { eq } from 'drizzle-orm';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function TreePage() {
@@ -40,7 +41,13 @@ export default async function TreePage() {
         <div className="text-center mb-8">
           <div className="w-24 h-24 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4 flex items-center justify-center">
             <span className="text-2xl text-white">
-              <img src={imageSrc} alt="User image" className="rounded-full" />
+              <Image
+                src={imageSrc}
+                width={200}
+                height={200}
+                alt="User image"
+                className="rounded-full"
+              />
             </span>
           </div>
           <h1 className="text-2xl font-bold text-gray-800 mb-2">
