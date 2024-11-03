@@ -71,6 +71,7 @@ export function LinkEditor({ initialLinks }: LinkEditorProps) {
         title: 'Success',
         description: 'Link added successfully',
       });
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast({
         title: 'Error',
@@ -92,6 +93,7 @@ export function LinkEditor({ initialLinks }: LinkEditorProps) {
       });
 
       if (!response.ok) throw new Error('Failed to update link order');
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast({
         title: 'Error',
@@ -115,6 +117,7 @@ export function LinkEditor({ initialLinks }: LinkEditorProps) {
         title: 'Success',
         description: 'Link deleted successfully',
       });
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast({
         title: 'Error',
